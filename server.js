@@ -20,11 +20,14 @@ const PORT = process.env.PORT || 8000;
 // 8000 = port par défaut (local)
 
 // PORT hiya chi numéro (b7al bab) li server Express yb9a ytsana fih les requêtes.
-
+app.get('/hello/:name', (req, res) => {
+    res.send(`Hello ${req.params.name}!`);
+})
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
+
 // Katdir route GET f path /
 
 // app.get(...) = katst3ml HTTP GET
